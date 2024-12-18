@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
@@ -6,6 +9,7 @@ body {
     display: flex;
     justify-content: center; /* Optional: center title content horizontally */
     align-items: center; /* Optional: center title content vertically */
+    font-family: 'Anton', sans-serif; /* Fallback to sans-serif */
 }
 
 .main-container {
@@ -26,6 +30,12 @@ body {
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
     z-index: 0; /* Backgrounds are behind everything */
+
+    background-image: url('./images/Fondo.jpeg'); /* Relative to the CSS file */
+    background-size: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; 
 }
 
 .background.visible {
@@ -33,53 +43,72 @@ body {
     z-index: 1; /* Keep it above other backgrounds */
 }
 
-.first {
-    background-image: url('./images/Landing Page2_Amic Invisible.jpg'); /* Relative to the CSS file */
-    background-size: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh; 
+.header-img {
+    background-image: url('./images/Amic Invisible 2024_Canva.png');
+    width: 100%; /* Make it responsive to the container's width */
+    height: 50px; /* Maintain aspect ratio */
+    background-size: contain; /* Ensure the entire image fits */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    margin-top: 70px;
 }
+
+.bottom-header{
+    background-image: url('./images/Data_Canva.png');
+    width: 100%; /* Make it responsive to the container's width */
+    height: 200px; /* Maintain aspect ratio */
+    background-size: contain; /* Ensure the entire image fits */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+}
+
 
 .second{
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.third{
-    background-color: green;
-}
-
-.fourth{
-    background-color: aqua;
+.text-container{
+    background-color: white;
+    border: 1px solid #60401C;
+    border-radius: 20px;
+    box-shadow: 8px 0 0 #60401C; 
+    width: 50%;
+    padding: 0px 20px 0;
+    text-align:center
 }
 
 .title-container {
     position: absolute; /* Place the title container above everything */
-    top: 50%; /* Center vertically */
+    top: 42%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for centering */
     z-index: 2; /* Ensure it's above all backgrounds */
     text-align: center; /* Center text */
-    color: white; /* Contrast text against backgrounds */
-    font-family: Arial, sans-serif; /* Improve font style */
+    color: #585759;
+    width: 75%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .title-container h1 {
-    font-size: 3rem; /* Adjust title size */
+    font-size: 43px; /* Adjust title size */
     margin: 0.5em 0;
-}
-
-.title-container h3 {
-    font-size: 1.5rem; /* Adjust subtitle size */
-    margin: 0.5em 0;
+    letter-spacing: 1px;
+    margin-top: -30px;
 }
 
 .title-container input { 
-    height: 50px;
+    height: 70px;
     padding: 0.5em;
     font-size: 1rem;
     border: 1px solid #60401C;
-    border-radius: 20px;
+    border-radius: 35px;
     box-shadow: 8px 0 0 #60401C; /* Solid shadow to the right */
 }
 
@@ -92,3 +121,5 @@ body {
     color: black; /* Keeps the text color unchanged */
     border: 1px solid #60401C; /* No border changes */
 }
+
+
