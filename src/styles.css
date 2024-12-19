@@ -63,22 +63,46 @@ body {
 }
 
 
-.second{
-    background-color: blue;
+.second,
+.third,
+.fourth{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    gap: 60px;
 }
 
 .text-container{
-    background-color: white;
-    border: 1px solid #60401C;
-    border-radius: 20px;
-    box-shadow: 8px 0 0 #60401C; 
-    width: 50%;
-    padding: 0px 20px 0;
-    text-align:center
+    background-color: #fdf8ed;
+    border: 2px solid #60401C;
+    border-radius: 15px;
+    box-shadow: 8px 8px 0 #60401C; 
+    width: 70%;
+    padding: 0 10px 0;
+    margin: 0 auto 1.5em;
+    text-align: center;
+    font-size: 1rem;
+    color: #5e4630;
+}
+
+.image-frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f2f1ec; /* Light grey background */
+    box-shadow: inset -2px 2px 1px #ffffff, /* White shadow on left/top */
+                inset 2px -2px 1px #5c5551;   /* Shadow on left/bottom */
+    width: 80%; /* Ensure responsiveness */
+    height:400px;
+    text-align: center; 
+}
+
+.poster{
+    width: 80%; 
+    height:200px; 
+    background-color: black;
 }
 
 .title-container {
@@ -105,8 +129,9 @@ body {
 
 .title-container input { 
     height: 70px;
-    padding: 0.5em;
-    font-size: 1rem;
+    padding: 0.5em 1em;
+    font-size: 2rem;
+    font-family: 'Anton', sans-serif; 
     border: 1px solid #60401C;
     border-radius: 35px;
     box-shadow: 8px 0 0 #60401C; /* Solid shadow to the right */
@@ -122,4 +147,45 @@ body {
     border: 1px solid #60401C; /* No border changes */
 }
 
+
+/* CSS */
+.button-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
 
